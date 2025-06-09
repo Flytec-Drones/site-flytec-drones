@@ -4,3 +4,22 @@
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
 }
+
+:root {
+  --tamanho-fonte-normal: 1em;
+  --tamanho-fonte-titulo-1: 1.2em;
+  --tamanho-fonte-titulo-2: 1.1em;
+
+  --cor-principal: #2b2565;
+  --cor-secundaria: #8c52ff;
+  --cor-cinza: #d9d9d9;
+  --cor-branco: #f1f1ff;
+  --cor-preto: #212121;
+
+  --largura-geral: min(1300px, 80dvw, 90dvw);
+}
+
+main {
+  margin: 0 auto;
+  width: var(--largura-geral);
+}

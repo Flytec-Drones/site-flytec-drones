@@ -4,13 +4,13 @@
 
 Estamos construindo um site com componentes separados, cada membro da equipe é responsável por uma seção. O objetivo é estruturar o trabalho como componentes:
 
-* `apoie`
-* `conquistas`
-* `equipe`
-* `footer`
-* `header`
-* `principal`
-* `sobre`
+- `apoie`
+- `participacoes`
+- `equipe`
+- `footer`
+- `header`
+- `principal`
+- `sobre`
 
 Cada componente será desenvolvido por um integrante, facilitando a manutenção e integração.
 
@@ -20,7 +20,7 @@ Cada componente será desenvolvido por um integrante, facilitando a manutenção
 
 Siga este passo a passo para contribuir usando **fork**, **GitHub Codespaces**, **branch**, **commit** e **pull request**.
 
-### 1. Faça um *fork* do repositório principal
+### 1. Faça um _fork_ do repositório principal
 
 1. Acesse o repositório principal no GitHub.
 2. Clique em **Fork** (canto superior direito).
@@ -45,7 +45,7 @@ Siga este passo a passo para contribuir usando **fork**, **GitHub Codespaces**, 
 No terminal do Codespace, execute:
 
 ```bash
-git checkout -b componente/<nome-da-branch>  # ex: componente/conquistas
+git checkout -b componente/<nome-da-branch>  # ex: componente/participacoes
 ```
 
 Isso mantém o `main` limpo para integração.
@@ -59,18 +59,19 @@ Isso mantém o `main` limpo para integração.
 Edite os arquivos HTML/CSS da sua parte.
 Por exemplo:
 
-* `conquista.html`, `conquista.css`
+- `participacoes.html`, `participacoes.css`
+
+> **Importante:** Nomeie suas classes seguindo o seguinte padrão: `componente-classe`
 
 Após finalizar:
 
 ```bash
 git add .
-git commit -m "Implementa componente conquistas"
-git push --set-upstream origin componente/conquistas
+git commit -m "Implementa componente participacoes"
+git push --set-upstream origin componente/participacoes
 ```
 
-<img src="./docs/5-commit.png" />
----
+## <img src="./docs/5-commit.png" />
 
 ### 5. Crie um Pull Request
 
@@ -79,7 +80,8 @@ git push --set-upstream origin componente/conquistas
 3. Use o seletor para comparar sua branch com `main` do upstream.
 4. Preencha título/descritivo:
 
-   * Ex: `[conquistas] Adiciona seção de conquistas`
+   - Ex: `[participacoes] Adiciona seção de participacoes`
+
 5. Marque como **Draft** se ainda estiver em progresso
 
 <img src="./docs/6-pr.png" />
@@ -87,10 +89,9 @@ git push --set-upstream origin componente/conquistas
 
 ### 6. Revisaão e integração
 
-* O líder analisará o código
-* Pode solicitar ajustes ou sugerir mudanças
-* Quando aprovado, **merge** é feito e a branch é fechada
-
+- O líder analisará o código
+- Pode solicitar ajustes ou sugerir mudanças
+- Quando aprovado, **merge** é feito e a branch é fechada
 
 ### 7. Próximos passos
 
@@ -105,18 +106,17 @@ git push origin main
 
 Isso mantém seu projeto atualizado.
 
-
 ## Distribuição das tarefas
 
-| Componente | Responsável | Arquivos esperados                               |
-| ---------- | ----------- | ------------------------------------------------ |
-| apoie      | \[nome]     | apoie.html / apoie.css / apoie.js                |
-| conquistas | \[nome]     | conquistas.html / conquistas.css / conquistas.js |
-| equipe     | \[nome]     | equipe.html / equipe.css / equipe.js             |
-| header     | \[nome]     | header.html / header.css / header.js             |
-| principal  | \[nome]     | principal.html / principal.css / principal.js    |
-| sobre      | \[nome]     | sobre.html / sobre.css / sobre.js                |
-| footer     | \[nome]     | footer.html / footer.css / footer.js             |
+| Componente    | Responsável | Arquivos esperados                                        |
+| ------------- | ----------- | --------------------------------------------------------- |
+| apoie         | \[nome]     | apoie.html / apoie.css / apoie.js                         |
+| participacoes | \[nome]     | participacoes.html / participacoes.css / participacoes.js |
+| equipe        | \[nome]     | equipe.html / equipe.css / equipe.js                      |
+| header        | \[nome]     | header.html / header.css / header.js                      |
+| principal     | \[nome]     | principal.html / principal.css / principal.js             |
+| sobre         | \[nome]     | sobre.html / sobre.css / sobre.js                         |
+| footer        | \[nome]     | footer.html / footer.css / footer.js                      |
 
 Cada membro deverá:
 
@@ -124,7 +124,6 @@ Cada membro deverá:
 2. Implementar o conteúdo
 3. Commitar e subir as alterações
 4. Abrir o PR conforme fluxo descrito
-
 
 ## Conclusão
 
