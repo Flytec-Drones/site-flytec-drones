@@ -4,11 +4,9 @@
 
 Estamos construindo um site com componentes separados, cada membro da equipe é responsável por uma seção. O objetivo é estruturar o trabalho como componentes:
 
-- `apoie`
-- `participacoes`
 - `equipe`
-- `footer`
-- `header`
+- `rodape`
+- `cabecalho`
 - `principal`
 - `sobre`
 
@@ -45,7 +43,7 @@ Siga este passo a passo para contribuir usando **fork**, **GitHub Codespaces**, 
 No terminal do Codespace, execute:
 
 ```bash
-git checkout -b componente/<nome-da-branch>  # ex: componente/participacoes
+git checkout -b componente/<nome-da-branch>  # ex: componente/equipe
 ```
 
 Isso mantém o `main` limpo para integração.
@@ -59,7 +57,7 @@ Isso mantém o `main` limpo para integração.
 Edite os arquivos HTML/CSS da sua parte.
 Por exemplo:
 
-- `participacoes.html`, `participacoes.css`
+- `equipe.html`, `equipe.css`
 
 > **Importante:** Nomeie suas classes seguindo o seguinte padrão: `componente-classe`
 
@@ -67,8 +65,8 @@ Após finalizar:
 
 ```bash
 git add .
-git commit -m "Implementa componente participacoes"
-git push --set-upstream origin componente/participacoes
+git commit -m "Implementa componente equipe"
+git push --set-upstream origin componente/equipe
 ```
 
 ## <img src="./docs/5-commit.png" />
@@ -80,7 +78,7 @@ git push --set-upstream origin componente/participacoes
 3. Use o seletor para comparar sua branch com `main` do upstream.
 4. Preencha título/descritivo:
 
-   - Ex: `[participacoes] Adiciona seção de participacoes`
+   - Ex: `[equipe] Adiciona seção de equipe`
 
 5. Marque como **Draft** se ainda estiver em progresso
 
@@ -111,12 +109,10 @@ Isso mantém seu projeto atualizado.
 | Componente    | Responsável | Arquivos esperados                                        |
 | ------------- | ----------- | --------------------------------------------------------- |
 | apoie         | \[nome]     | apoie.html / apoie.css / apoie.js                         |
-| participacoes | \[nome]     | participacoes.html / participacoes.css / participacoes.js |
 | equipe        | \[nome]     | equipe.html / equipe.css / equipe.js                      |
-| header        | \[nome]     | header.html / header.css / header.js                      |
 | principal     | \[nome]     | principal.html / principal.css / principal.js             |
 | sobre         | \[nome]     | sobre.html / sobre.css / sobre.js                         |
-| footer        | \[nome]     | footer.html / footer.css / footer.js                      |
+| rodape        | \[nome]     | rodape.html / rodape.css / rodape.js                      |
 
 Cada membro deverá:
 
@@ -124,7 +120,3 @@ Cada membro deverá:
 2. Implementar o conteúdo
 3. Commitar e subir as alterações
 4. Abrir o PR conforme fluxo descrito
-
-## Conclusão
-
-Seguindo essas etapas, garantimos organização, separação de trabalho e facilidade de revisão. Qualquer dúvida, estou aqui para ajudar.
