@@ -44,7 +44,7 @@ Para que o seu _fork_ saiba onde o projeto original está, precisamos criar uma 
 2.  No terminal do Codespace, execute o comando abaixo:
 
 ```bash
-git remote add upstream git remote add upstream https://github.com/Cefast-Flytech-Drone/cefast-flytech.git
+git remote add upstream https://github.com/Cefast-Flytech-Drone/cefast-flytech.git
 ```
 
 > **O que isso faz?**
