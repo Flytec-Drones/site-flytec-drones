@@ -1,4 +1,4 @@
-# README do Projeto
+# README
 
 ## Descrição geral
 
