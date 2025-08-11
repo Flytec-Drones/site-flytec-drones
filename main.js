@@ -11,7 +11,7 @@ function carregarHTML(url, seletorDestino) {
 }
 
 carregarHTML("./paginas/principal/cabecalho/cabecalho.html", ".secao-cabecalho");
-carregarHTML("./paginas/principal/principal/principal.html", ".secao-principal");
 carregarHTML("./paginas/principal/sobre/sobre.html", ".secao-sobre")
-carregarHTML("./paginas/principal/equipe/equipe.html", ".secao-equipe");
+carregarHTML("./paginas/principal/areas/areas.html", ".secao-areas");
+carregarHTML("./paginas/principal/participacoes/participacoes.html", ".secao-participacoes");
 carregarHTML("./paginas/principal/rodape/rodape.html", ".secao-rodape");
