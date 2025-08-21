@@ -19,6 +19,10 @@
   --largura-geral: min(1300px, 80dvw, 90dvw);
 }
 
+html {
+  overflow-x: hidden;
+}
+
 main {
   margin: 0 auto;
   width: var(--largura-geral);
