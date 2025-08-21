@@ -1,7 +1,7 @@
 .footer {
-  background-color: #1f1f6d; /* azul escuro do exemplo */
+  background-color: #1f1f6d; 
   color: white;
-  padding: 20px;
+  padding: 50px 0;
   font-family: Arial, sans-serif;
 }
 
@@ -9,13 +9,14 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  flex-wrap: wrap; /* para funcionar em telas pequenas */
+  flex-wrap: wrap; 
   gap: 20px;
 }
 
 .footer-left, .footer-right {
-  flex: 1; /* as colunas crescem igualmente */
-  min-width: 280px; /* evita quebrar muito em telas pequenas */
+  flex: 1;
+  min-width: 280px; 
+  padding-left: 80px;
 }
 
 .footer-left h3,
@@ -25,21 +26,56 @@
 
 .contato p, .endereço p {
   margin: 5px 0;
+  font-size: 18px; 
+  font-family:'Times New Roman', Times, serif;
 }
 
+.iconem , .iconet {
+  vertical-align: middle;
+  margin: 5px 0;
+}
 .social a img {
   width: 30px;
   margin-right: 10px;
 }
 
-.mapa img {
-  max-width: 100%;
-  border-radius: 4px;
+.mapa {
+  text-align: center; 
+  padding-right: 30px;
 }
 
+.mapa iframe {
+  display: block;
+  margin: 0 auto;
+  padding-right: 30px;
+  width: 350px;     
+  height: 200px;    
+}
+
+.endereço {
+  margin-top: 10px;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+  padding-right: 30px;
+  text-align: justify;
+}
+
+
 .footer-bottom {
-  border-top: 2px solid #ccc;
-  text-align: center;
+  text-align: center; 
   margin-top: 20px;
   padding-top: 10px;
+}
+
+.footer-bottom p {
+  display: inline-block;         
+  border-top: 2px solid #ccc;     
+  padding-top: 5px; 
+  font-size: 18px;
+  font-family: 'Times New Roman', Times, serif;              
+}
+
+h3 {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 22px;
 }
