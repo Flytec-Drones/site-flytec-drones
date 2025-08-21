@@ -31,15 +31,17 @@ h3 {
 
 .inicial {
     position: relative;
+    top: 0;
+    left: 50%;
+    margin-left: -50vw;
+    width: 100vw;
+    height: 100vh;
     background-image: url(img/drone_foto.png);
     background-size: cover;
     background-position: center;
-    height: 70vh;
     display: flex;
     align-items: center;
     padding: 2rem;
-    border-bottom-left-radius: 40px;
-    border-bottom-right-radius: 40px;
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
     overflow: hidden;
 }
@@ -49,15 +51,17 @@ h3 {
     inset: 0;
     background-color: var(--cor-principal);
     opacity: 0.6;
-    border-bottom-left-radius: 40px;
-    border-bottom-right-radius: 40px;
 }
 
 .inicial .container-text {
     position: relative;
     color: var(--cor-branco);
+    width: var(--largura-geral);
+    margin: 0 auto;
+}
+
+.inicial p {
     max-width: 500px;
-    margin-left: 5vw;
 }
 
 .inicial p {
@@ -84,7 +88,6 @@ h3 {
 .quem-somos-section {
     padding: 4rem 0;
 }
-
 
 .quem-somos-container {
     display: flex;
