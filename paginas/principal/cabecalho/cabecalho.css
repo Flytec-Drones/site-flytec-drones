@@ -1,0 +1,96 @@
+header {
+  background-color: #2b2565;
+  padding: 5px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+/* Logo */
+.logo img {
+    height: 70px;
+    width: 80px;
+    margin-right: 50px;
+}
+
+/* Cabeçalho */
+.nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav a:hover {
+  background: #964f4f;
+}
+
+/* Menu */
+.menu {
+  display: inline-flex;
+  background-color: white;
+  border-radius: 30px;
+  padding: 8px 20px;
+}
+
+.menu a {
+  position: relative;
+  text-decoration: none;
+  color: black;
+  font-family: 'Bogart';
+  padding: 0 15px;
+  transition: color 0.3s ease;
+}
+
+.menu a:hover {
+  color: #2b2565;
+}
+
+.menu a::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #2b2565;
+  transition: width 0.3s ease;
+}
+
+.menu a:hover::after {
+  width: 100%;
+}
+
+.menu a + a {
+  border-left: 1px solid #ccc;
+}
+
+/* Botão Apoie */
+.apoie-projeto {
+  position: relative;
+  background-color: white;
+  border-radius: 30px;
+  padding: 8px 20px;
+  text-decoration: none;
+  font-family: 'Bogart';
+  color: #2a2566;
+  margin-left: 40px;
+  transition: all 0.3s ease;
+}
+
+.apoie-projeto:hover {
+  background-color: #2a2566;
+  color: white;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+/* Fonte */
+@font-face {
+    font-family: 'Bogart';
+    src: url('font/bogart/Bogart-Bold-trial.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
