@@ -1,5 +1,6 @@
 .areas {
-    background-color: #433784;
+    margin: 64px 0;
+    background-color: var(--cor-principal);
     padding: 20px;
     width: 100vw;
     display: flex;
@@ -8,40 +9,53 @@
     margin-left: calc(-50vw + 50%);
 }
 
-.blocos {
+.areas .blocos {
     text-align: center;   
     max-width: 250px;
     color: white;
     position: static;
 }
 
-.icone {
+.areas .icone {
+    position: relative;
     width: 120px;
     height: 120px;
     border-radius: 50%;
-    background-color: rgb(24, 2, 45);
+    background-color: #18022d;
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 0 auto 15px;
+    border: 3px solid var(--cor-principal);
+    transition: all .5s;
 }
 
-.icone img {
-    width: 60px;
-    height: 60px;
+.areas .icone img {
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    transition: all .5s;
 }
 
-.icone:hover{
-    transform: scale(0.9);
+.areas .icone:hover{
+    /* transform: scale(0.9); */
     box-shadow: 0 0 20px rgba(19, 0, 74, 0.5);
+    border: 3px solid #18022d;
+    cursor: pointer;
 }
 
-h2 {
+.areas .icone:hover img {
+    width: 60%;
+    height: 60%;
+}
+
+.areas h2 {
     font-size: 20px;
     margin: 10px 0;
+    color: white;
 }
 
-p {
+.areas p {
     font-size: 13px;
     margin: 0;
     position: static;
