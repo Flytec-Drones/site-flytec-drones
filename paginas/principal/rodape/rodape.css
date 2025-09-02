@@ -14,7 +14,7 @@
 }
 
 .footer-left, .footer-right {
-  flex: 1;
+  flex: 1; 
   min-width: 280px; 
   padding-left: 80px;
 }
@@ -41,38 +41,43 @@
 
 .mapa {
   text-align: center; 
-  padding-right: 30px;
+  padding-right: 80px;
 }
 
 .mapa iframe {
   display: block;
-  margin: 0 auto;
-  padding-right: 30px;
-  width: 350px;     
-  height: 200px;    
+  margin: 0 auto; 
+  padding-right: 80px;
+  width: 350px;      
+  height: 200px;     
+
 }
 
 .endereço {
-  margin-top: 10px;
+  margin-top: 10px; 
   font-size: 16px;
   font-family: Arial, sans-serif;
-  padding-right: 30px;
+  padding-right: 80px;
   text-align: justify;
 }
 
 
 .footer-bottom {
-  text-align: center; 
+  width: 100%;             
+  display: flex;            
+  justify-content: center;  
+  align-items: center;      
   margin-top: 20px;
-  padding-top: 10px;
+  padding: 10px 0;
+
 }
 
 .footer-bottom p {
-  display: inline-block;         
-  border-top: 2px solid #ccc;     
-  padding-top: 5px; 
+  display: inline-block;
+  border-top: 2px solid #ccc; 
+  padding-top: 5px;
   font-size: 18px;
-  font-family: 'Times New Roman', Times, serif;              
+  font-family: 'Times New Roman', Times, serif;
 }
 
 h3 {
