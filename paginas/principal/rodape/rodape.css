@@ -34,9 +34,15 @@
   vertical-align: middle;
   margin: 5px 0;
 }
-.social a img {
-  width: 30px;
+
+.social a {
+  color: white;
+  text-decoration: none;
+}
+
+.social i {
   margin-right: 10px;
+  font-size: 24px;
 }
 
 .mapa {
