@@ -82,16 +82,34 @@
   font-size: 22px;
 }
 
-@media(max-width: 850px) {
+@media(max-width: 800px) {
+  .footer .mapa iframe {
+    width: 300px;
+  }
+
+  .place-card.place-card-medium {
+    display: none !important;
+  }
+}
+
+@media(max-width: 720px) {
   .footer .footer-container{
     flex-direction: column;
     align-items: center;
-    gap: 30px;
   }
+
+  .footer .footer-left {
+    width: 300px;
+  }
+
 
   .footer .mapa {
     display: flex;
     flex-direction: column-reverse;
+  }
+
+  .footer h3 {
+    margin: 30px 0 0 0;
   }
 
   .footer .mapa iframe {
