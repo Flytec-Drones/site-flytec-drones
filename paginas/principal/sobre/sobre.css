@@ -178,17 +178,15 @@ h3 {
 /* Responsividade */
 @media (max-width: 768px) {
     .inicial {
-        height: 60vh;
+        height: 90vh;
     }
 
     .inicial .container-text {
         margin: 0 auto;
-        text-align: center;
     }
 
     .quem-somos-container {
         flex-direction: column;
-        text-align: center;
     }
 
     .card {
