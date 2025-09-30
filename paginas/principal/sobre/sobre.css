@@ -1,6 +1,3 @@
-body{    
-    background-color: var(--cor-cinza);
-}
 .sobre {
     line-height: 1.6;
     color: var(--cor-preto);
@@ -133,7 +130,7 @@ h3 {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: all 0.5s ease-in-out;
     overflow: hidden;
-    height: 12rem; 
+    height: 12rem;
     cursor: pointer;
     display: flex;
     flex-direction: column;
@@ -150,7 +147,7 @@ h3 {
 
 .card.expanded {
     height: auto;
-    justify-content: flex-start; 
+    justify-content: flex-start;
 }
 
 .icon {
@@ -181,17 +178,15 @@ h3 {
 /* Responsividade */
 @media (max-width: 768px) {
     .inicial {
-        height: 60vh;
+        height: 90vh;
     }
 
     .inicial .container-text {
         margin: 0 auto;
-        text-align: center;
     }
 
     .quem-somos-container {
         flex-direction: column;
-        text-align: center;
     }
 
     .card {

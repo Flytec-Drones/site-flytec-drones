@@ -55,6 +55,7 @@
   font-size: 15px;
   font-family: Arial, Helvetica, sans-serif;
   color: #2a2566;
+  margin-bottom: 10px;
 }
 
 .cartao img {
@@ -64,8 +65,36 @@
 
 /* Fonte */
 @font-face {
-    font-family: 'Bogart';
-    src: url('font/bogart/Bogart-Bold-trial.ttf') format('truetype');
-    font-weight: bold;
-    font-style: normal;
+  font-family: 'Bogart';
+  src: url('font/bogart/Bogart-Bold-trial.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+/* Responsividade */
+@media (max-width: 945px) {
+  .participaoes h2 {
+    font-size: 32px
+  }
+
+  .cartoes {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cartao {
+    width: 80%;
+    max-width: 350px;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .participacoes h2 {
+    font-size: 28px;
+  }
+
+  .cartao {
+    width: 90%;
+  }
 }
