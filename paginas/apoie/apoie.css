@@ -1,0 +1,310 @@
+/* Definição de Variáveis de Cores */
+:root {
+  --background-color: #F0E8F9;
+  --primary-text-color: #2F1E4A;
+  --secondary-text-color: #55446E;
+  --card-background-color: #E6E1EE;
+  --icon-color: #8C6EDF; /* Uma cor de roxo para os ícones */
+}
+
+/* Estilos Gerais do Corpo */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--background-color);
+  color: var(--primary-text-color);
+}
+
+/* --------------------
+// Seção do Cabeçalho (Não alterada, mas incluída para contexto)
+-------------------- */
+.cabecalho {
+  background-color: transparent; /* Alterado para ficar transparente como no design */
+  padding: 5px 30px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  max-width: var(--largura-geral);
+}
+
+.logo img {
+  height: 70px;
+  width: 80px;
+  margin-right: 50px;
+}
+
+.menu-items {
+  display: flex;
+  align-items: center;
+}
+
+.menu {
+  display: inline-flex;
+  background-color: white;
+  border-radius: 30px;
+  padding: 8px 20px;
+}
+
+.menu a {
+  position: relative;
+  text-decoration: none;
+  color: black;
+  font-family: 'Bogart';
+  padding: 0 15px;
+  transition: color 0.3s ease;
+}
+
+.menu a:hover {
+  color: #2b2565;
+}
+
+.menu a::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #2b2565;
+  transition: width 0.3s ease;
+}
+
+.menu a:hover::after {
+  width: 100%;
+}
+
+.menu a + a {
+  border-left: 1px solid #ccc;
+}
+
+.apoie-projeto {
+  position: relative;
+  background-color: white;
+  border-radius: 30px;
+  padding: 8px 20px;
+  text-decoration: none;
+  font-family: 'Bogart';
+  color: #2a2566;
+  margin-left: 40px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.apoie-projeto span {
+  position: relative;
+  z-index: 2;
+}
+
+.apoie-projeto::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, rgba(63, 94, 251, 1) 0%, rgba(252, 70, 107, 1) 100%);
+  background-size: 200% 200%;
+  background-position: 0% 50%;
+  border-radius: 30px;
+  opacity: 0;
+  z-index: 1;
+  transition: opacity 0.5s ease, background-position 0.5s ease;
+}
+
+.apoie-projeto:hover {
+  color: white;
+}
+
+.apoie-projeto:hover::before {
+  opacity: 1;
+  animation: movimento-continuo 4s ease infinite;
+}
+
+@keyframes movimento-continuo {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.hamburger-btn {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  position: relative;
+  z-index: 1001;
+  margin-left: 20px;
+}
+
+.hamburger-btn span {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: white;
+  margin: 5px 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* --------------------
+// Seção Principal - Hero
+-------------------- */
+.hero-section {
+  text-align: center;
+  padding: 150px 10% 80px; /* Aumentado o padding superior para compensar o cabeçalho fixo */
+  background-color: var(--background-color);
+  margin-top: 0;
+}
+
+.hero-section h1 {
+  font-family: 'Poppins', sans-serif !important; /* Use a fonte da imagem, se tiver, ou uma similar */
+  color: var(--primary-text-color);
+  font-weight: 700;
+  font-size: 3em; /* Ajustado para um tamanho maior */
+  line-height: 1.2;
+}
+
+.hero-section p {
+  font-size: 1.1em;
+  color: var(--secondary-text-color);
+  max-width: 700px;
+  margin: 20px auto 0;
+  line-height: 1.5;
+}
+
+/* --------------------
+// Seção "Por que apoiar?"
+-------------------- */
+.support-section {
+  text-align: center;
+  padding: 40px 10%;
+  background-color: var(--background-color); /* Usamos a mesma cor de fundo para a transição suave */
+}
+
+.support-section h2 {
+  color: var(--primary-text-color);
+  font-size: 1.8em;
+  margin-bottom: 40px;
+}
+
+.cards-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background-color: var(--card-background-color);
+  padding: 40px 20px; /* Ajustado o padding para maior espaço interno */
+  border-radius: 10px;
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* Sombra mais suave */
+}
+
+/* Estilo para os ícones */
+.card .icon {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 20px;
+}
+
+.card p {
+  font-weight: 600;
+  color: var(--primary-text-color);
+}
+
+/* --------------------
+// Formulário de Contato (Não alterado, mas incluído para contexto)
+-------------------- */
+.contact-form-section {
+  padding: 60px 10%;
+  background-color: var(--background-color);
+}
+
+form {
+  background-color: var(--card-background-color);
+  padding: 40px;
+  border-radius: 10px;
+  max-width: 800px;
+  margin: 0 auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-row {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.form-group {
+  flex: 1;
+  min-width: 250px;
+}
+
+.form-group label {
+  display: none;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: #f7f3fd;
+  font-size: 1em;
+  color: #333;
+  resize: none;
+}
+
+.submit-button {
+  background-color: #2b2565;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Responsividade (Mantida) */
+@media (max-width: 768px) {
+  .hero-section h1 {
+    font-size: 2.5em;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-section h1 {
+    font-size: 2em;
+  }
+  .cards-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .card {
+    width: 80%;
+  }
+  .form-row {
+    flex-direction: column;
+  }
+}
