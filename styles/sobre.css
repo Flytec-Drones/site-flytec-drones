@@ -7,8 +7,9 @@
 h1,
 h2,
 h3 {
-    font-family: 'Playfair Display', serif;
-    color: var(--cor-preto);
+    font-family: "BioRhyme", serif;
+    font-weight: 800;
+    color: var(--cor-secundaria);
     margin-bottom: 1rem;
 }
 
@@ -18,6 +19,7 @@ h1 {
 }
 
 h2 {
+    margin-top: 30px;
     font-size: 2.25rem;
 }
 
@@ -33,7 +35,7 @@ h3 {
     margin-left: -50vw;
     width: 100vw;
     height: 100vh;
-    background-image: url(img/drone_foto.png);
+    background-image: url("../img/drone_foto.png");
     background-size: cover;
     background-position: center;
     display: flex;
@@ -67,8 +69,12 @@ h3 {
 }
 
 .explore {
+    font-family: "BioRhyme", serif;
+    font-weight: 700;
     display: inline-block;
-    background-color: var(--cor-secundaria);
+    background: linear-gradient(45deg, rgba(63, 94, 251, 1) 0%, rgba(252, 70, 107, 1) 100%);
+    background-size: 200% 200%;
+    background-position: 0% 50%;
     color: var(--cor-branco);
     font-weight: bold;
     padding: 0.75rem 2rem;
