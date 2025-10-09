@@ -1,0 +1,410 @@
+.cabecalho {
+  background-color: var(--cor-principal);
+  padding: 5px 30px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  max-width: var(--largura-geral);
+}
+
+/* Logo */
+.logo img {
+    height: 70px;
+    width: 80px;
+    margin-right: 50px;
+}
+
+/* Cabeçalho */
+.nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav a:hover {
+  background: #964f4f;
+}
+
+/* Menu */
+.menu {
+  display: inline-flex;
+  background-color: white;
+  border-radius: 30px;
+  padding: 8px 20px;
+}
+
+.menu a {
+  position: relative;
+  text-decoration: none;
+  color: black;
+  font-family: 'Bogart';
+  padding: 0 15px;
+  transition: color 0.3s ease;
+}
+
+.menu a:hover {
+  color: var(--cor-principal);
+}
+
+.menu a::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: var(--cor-principal);
+  transition: width 0.3s ease;
+}
+
+.menu a:hover::after {
+  width: 100%;
+}
+
+.menu a + a {
+  border-left: 1px solid #ccc;
+}
+
+/* Botão Apoie */
+/* .apoie-projeto {
+  position: relative;
+  background-color: white;
+  border-radius: 30px;
+  padding: 8px 20px;
+  text-decoration: none;
+  font-family: 'Bogart';
+  color: #2a2566;
+  margin-left: 40px;
+  transition: all 0.3s ease;
+}
+
+.apoie-projeto:hover {
+  background-color: #2a2566;
+  color: white;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+} */
+
+.apoie-projeto {
+  position: relative;
+  background-color: white;
+  border-radius: 30px;
+  padding: 8px 20px;
+  text-decoration: none;
+  color: #2a2566;
+  margin-left: 40px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+
+.apoie-projeto span {
+  position: relative;
+  z-index: 2;
+  font-family: 'Bogart' !important;
+}
+
+.apoie-projeto::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  font-family: 'Bogart';
+
+  background: linear-gradient(45deg, rgba(63, 94, 251, 1) 0%, rgba(252, 70, 107, 1) 100%);
+  background-size: 200% 200%;
+  background-position: 0% 50%;
+
+  border-radius: 30px;
+
+  opacity: 0;
+  z-index: 1;
+  transition: opacity 0.5s ease, background-position 0.5s ease;
+}
+
+.apoie-projeto:hover {
+  color: white;
+}
+
+.apoie-projeto:hover::before {
+  opacity: 1;
+  animation: movimento-continuo 4s ease infinite;
+}
+
+@keyframes movimento-continuo {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Fonte */
+@font-face {
+    font-family: 'Bogart';
+    src: url('font/bogart/Bogart-Bold-trial.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+/* Menu Hambúrguer */
+.menu-items {
+    display: flex;
+    align-items: center;
+}
+
+.hamburger-btn {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    z-index: 1001;
+    margin-left: 20px;
+}
+
+.hamburger-btn span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    margin: 5px 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.hamburger-btn.is-active span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger-btn.is-active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-btn.is-active span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+@media (max-width: 945px) {
+    .hamburger-btn {
+        display: block;
+    }
+    
+    .menu {
+        display: none;
+        flex-direction: column;
+        background-color: #ffffff;
+        border-radius: 0;
+        padding: 20px;
+        position: absolute;
+        top: 80px; 
+        right: 0;
+        width: 100%;
+        text-align: center;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        z-index: 999;
+        transition: transform 0.3s ease-in-out;
+        transform: translateX(100%);
+    }
+
+    .menu.is-active {
+        display: flex;
+        transform: translateX(0);
+    }
+    
+    .menu a {
+        padding: 15px 0;
+        border-left: none;
+        color: #2a2566;
+        font-size: 1.2rem;
+    }
+
+    .menu a + a {
+      border-left: none;
+    }
+    
+    .menu a::after {
+      background-color: #2a2566;
+    }
+}
+
+/* --------------------
+// Seção Principal - Hero
+-------------------- */
+.hero-section {
+  text-align: center;
+  padding: 150px 10% 80px; /* Aumentado o padding superior para compensar o cabeçalho fixo */
+  background-color: var(--background-color);
+  margin-top: 0;
+}
+
+.hero-section h1 {
+  font-family: 'Bogart'; /* Use a fonte da imagem, se tiver, ou uma similar */
+  color: var(--primary-text-color);
+  font-weight: 700;
+  font-size: 3em; /* Ajustado para um tamanho maior */
+  line-height: 1.2;
+}
+
+.hero-section p {
+  font-size: 1.1em;
+  color: var(--secondary-text-color);
+  max-width: 700px;
+  margin: 20px auto 0;
+  line-height: 1.5;
+}
+
+/* --------------------
+// Seção "Por que apoiar?"
+-------------------- */
+.support-section {
+  text-align: center;
+  padding: 40px 10%;
+  background-color: var(--background-color); /* Usamos a mesma cor de fundo para a transição suave */
+}
+
+.support-section h2 {
+  color: var(--primary-text-color);
+  font-size: 1.8em;
+  margin-bottom: 40px;
+  font-family: 'Bogart';
+}
+
+.cards-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background-color: var(--card-background-color);
+  padding: 40px 20px; /* Ajustado o padding para maior espaço interno */
+  border-radius: 10px;
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-shadow: 3px 4px 6px 1px rgb(21 0 85 / 15%);
+}
+
+/* Estilo para os ícones */
+.card .icon {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 20px;
+}
+
+.card p {
+  font-weight: 600;
+  color: var(--primary-text-color);
+}
+
+/* --------------------
+// Formulário de Contato (Não alterado, mas incluído para contexto)
+-------------------- */
+.contact-form-section {
+  padding: 60px 10%;
+  background-color: var(--background-color);
+}
+
+.contact-form-section h2 {
+  text-align: center;
+  color: white;
+  font-size: 1.8em;
+  margin-bottom: 40px;
+  font-family: 'Bogart';
+}
+
+form {
+  background-color: var(--cor-principal);
+  padding: 40px;
+  border-radius: 10px;
+  max-width: 600px;
+  margin: 0 auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-row {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.form-group {
+  flex: 1;
+  min-width: 250px;
+}
+
+.form-group label {
+  display: none;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: #f7f3fd;
+  font-size: 1em;
+  color: #333;
+  resize: none;
+}
+
+.submit-button {
+  background: linear-gradient(45deg, rgba(63, 94, 251, 1) 0%, rgba(252, 70, 107, 1) 100%);
+  background-size: 200% 200%;
+  background-position: 0% 50%;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  display: block;
+  margin: 0 auto;
+  transition: opacity 0.5s ease, background-position 0.5s ease;
+  animation: movimento-continuo 4s ease infinite;
+}
+
+/* Responsividade (Mantida) */
+@media (max-width: 768px) {
+  .hero-section h1 {
+    font-size: 2.5em;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-section h1 {
+    font-size: 2em;
+  }
+  .cards-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .card {
+    width: 80%;
+  }
+  .form-row {
+    flex-direction: column;
+  }
+}
+
+@font-face {
+    font-family: 'Bogart';
+    src: url('../../font/bogart/Bogart-Bold-trial.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}

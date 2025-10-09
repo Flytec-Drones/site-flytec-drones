@@ -1,5 +1,9 @@
+.secao-rodape {
+  margin-top: 64px;
+}
+
 .footer {
-  background-color: #1f1f6d; 
+  background-color: var(--cor-principal);
   color: white;
   padding: 50px 0;
   font-family: Arial, sans-serif;
