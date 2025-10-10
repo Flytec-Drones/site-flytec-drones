@@ -240,7 +240,6 @@
 .hero-section {
   text-align: center;
   padding: 150px 10% 80px; /* Aumentado o padding superior para compensar o cabeçalho fixo */
-  background-color: var(--background-color);
   margin-top: 0;
 }
 
@@ -266,7 +265,6 @@
 .support-section {
   text-align: center;
   padding: 40px 10%;
-  background-color: var(--background-color); /* Usamos a mesma cor de fundo para a transição suave */
 }
 
 .support-section h2 {

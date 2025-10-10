@@ -1,12 +1,18 @@
 .areas {
     margin: 64px 0;
-    background-color: var(--cor-principal);
-    padding: 20px;
     width: 100vw;
-    display: flex;
-    justify-content: space-around; 
-    align-items: flex-start;
     margin-left: calc(-50vw + 50%);
+    width: 100vw;
+}
+
+.content-areas {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: repeat(4, 1fr);
+    background-color: var(--cor-principal);
+    justify-items: center;
+    padding: 40px 0px;
 }
 
 .areas .blocos {
@@ -59,4 +65,29 @@
     font-size: 13px;
     margin: 0;
     position: static;
+    text-align: center;
+}
+
+@media (max-width: 1130px) {
+    .content-areas {
+        grid-template-columns: repeat(2, 2fr);
+    }
+}
+
+@media (max-width: 550px) {
+    .content-areas {
+        /* grid-template-columns: 1fr; */
+    }
+    .blocos {
+        width: 200px;
+    }
+}
+
+@media (max-width: 430px) {
+    .content-areas {
+        grid-template-columns: 1fr;
+    }
+    .blocos {
+        max-width: 250px;
+    }
 }

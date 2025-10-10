@@ -4,30 +4,6 @@
     scroll-behavior: smooth;
 }
 
-h1,
-h2,
-h3 {
-    font-family: "BioRhyme", serif;
-    font-weight: 800;
-    color: var(--cor-secundaria);
-    margin-bottom: 1rem;
-}
-
-h1 {
-    font-size: 3rem;
-    color: var(--cor-branco);
-}
-
-h2 {
-    margin-top: 30px;
-    font-size: 2.25rem;
-}
-
-h3 {
-    font-size: 2rem;
-    color: var(--cor-branco);
-}
-
 .inicial {
     position: relative;
     top: 0;
@@ -65,7 +41,7 @@ h3 {
 
 .inicial p {
     font-size: 1.25rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
 }
 
 .explore {
@@ -102,6 +78,10 @@ h3 {
 .quem-somos-content {
     min-width: 300px;
     flex: 1;
+}
+
+.quem-somos-content p {
+    margin-bottom: 1rem;
 }
 
 .quem-somos-image {
