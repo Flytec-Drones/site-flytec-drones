@@ -30,6 +30,10 @@
   margin: 5px 0;
 }
 
+.footer .social {
+  margin-top: 48px;
+}
+
 .footer .social a {
   color: white;
   text-decoration: none;
