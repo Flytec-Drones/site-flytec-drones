@@ -347,6 +347,14 @@ form {
 .form-group label {
   display: none;
 }
+.submit-button {
+  transition: all .2s ease;
+}
+
+.submit-button:hover {
+  transition: all .2s ease;
+  transform: translateY(-2px);
+}
 
 input, textarea {
   width: 100%;
