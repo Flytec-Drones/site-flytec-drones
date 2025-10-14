@@ -6,7 +6,6 @@
   background-color: var(--cor-principal);
   color: white;
   padding: 50px 0;
-  font-family: Arial, sans-serif;
 }
 
 .footer .footer-container {
@@ -23,8 +22,7 @@
 
 .footer .contato p, .endereço p {
   margin: 5px 0;
-  font-size: 18px; 
-  font-family:'Times New Roman', Times, serif;
+  font-size: 18px;
 }
 
 .footer .iconem , .iconet {
@@ -58,7 +56,6 @@
 .footer.endereço {
   margin-top: 10px; 
   font-size: 16px;
-  font-family: Arial, sans-serif;
   text-align: justify;
 }
 
@@ -78,12 +75,11 @@
   border-top: 2px solid #ccc; 
   padding-top: 5px;
   font-size: 18px;
-  font-family: 'Times New Roman', Times, serif;
 }
 
 .footer h3 {
-  font-family: 'Times New Roman', Times, serif;
   font-size: 22px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 @media(max-width: 800px) {

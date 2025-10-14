@@ -1,13 +1,14 @@
+
 .participacoes {
-  text-align: center;
   padding: 40px 20px;
 }
 
 .participacoes h2 {
   font-size: 40px;
-  font-family: 'Bogart';
+  font-family: "BioRhyme", serif;
   color: #2d0a66;
   margin-bottom: 30px;
+  text-align: center;
 }
 
 /* Cartões */
@@ -53,6 +54,7 @@
 
 .cartao p {
   font-size: 15px;
+  text-align: center;
   font-family: Arial, Helvetica, sans-serif;
   color: #2a2566;
   margin-bottom: 10px;
@@ -63,13 +65,6 @@
   width: 70px;
 }
 
-/* Fonte */
-@font-face {
-  font-family: 'Bogart';
-  src: url('font/bogart/Bogart-Bold-trial.ttf') format('truetype');
-  font-weight: bold;
-  font-style: normal;
-}
 
 /* Responsividade */
 @media (max-width: 945px) {
