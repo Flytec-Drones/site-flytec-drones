@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="../../styles/rodape.css">
   <link rel="stylesheet" href="../../.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 
 <body>
@@ -92,7 +93,8 @@
             <input type="email" id="email" name="email" placeholder="E-mail" required />
           </div>
         </div>
-        <input type="hidden" name="_next" value="obrigado.html">
+        <div class="g-recaptcha" data-sitekey="6LcHC-orAAAAAHhrkUmZ7KdmmDHJOS5lZsdKA-Qw"></div>
+        <input type="hidden" name="_next" value="http://localhost:5500/paginas/obrigado/obrigado.html">
         <button type="submit" class="submit-button">Enviar</button>
       </form>
     </section>
