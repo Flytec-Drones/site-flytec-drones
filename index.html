@@ -1,32 +1,284 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cefast Flytech Drone</title>
+  <title>Flytec Drones</title>
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="paginas/principal/cabecalho/cabecalho.css">
-  <link rel="stylesheet" href="paginas/principal/participacoes/participacoes.css">
-  <link rel="stylesheet" href="paginas/principal/sobre/sobre.css">
-  <link rel="stylesheet" href="paginas/principal/areas/areas.css">
-  <link rel="stylesheet" href="paginas/principal/rodape/rodape.css">
+  <link rel="stylesheet" href="styles/cabecalho.css">
+  <link rel="stylesheet" href="styles/participacoes.css">
+  <link rel="stylesheet" href="styles/sobre.css">
+  <link rel="stylesheet" href="styles/areas.css">
+  <link rel="stylesheet" href="styles/rodape.css">
+  <link rel="stylesheet" href="styles/equipe.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
     integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 </head>
+
 <body>
-  <header class="secao-cabecalho"></header>
+
+  <div id="loading-screen">
+    <div class="spinner"></div>
+  </div>
+
+  <header class="secao-cabecalho">
+    <div class="cabecalho">
+      <!-- Logo -->
+      <div class="content">
+        <div class="logo">
+          <a href="#">
+            <img src="img/logo.png" alt="Logo">
+          </a>
+        </div>
+
+        <div class="menu-items">
+          <!-- Menu -->
+          <nav class="menu">
+            <a href="#">Principal</a>
+            <a href="#sobre">Sobre</a>
+            <a href="#equipe">Equipe</a>
+            <a href="#conquistas">Conquistas</a>
+          </nav>
+          <!-- Botão Apoie -->
+          <a href="./paginas/apoie/apoie.html" class="apoie-projeto"><span>Apoie o Projeto</span></a>
+          <!-- Menu Hambúrguer -->
+          <button class="hamburger-btn" aria-label="Abrir menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
   <main>
-    <section class="secao-sobre"></section>
-    <section class="secao-areas"></section>
-    <section class="secao-participacoes"></section>
+    <section class="secao-sobre">
+      <div class="sobre">
+        <div class="inicial">
+          <div class="overlay"></div>
+          <div class="container-text">
+            <h1>Flytec Drones</h1>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fuga quaerat beatae, tempora laudantium eligendi
+              eum unde architecto quas sapiente accusamus placeat nulla fugit odit rerum enim voluptatibus dolorem.
+              Architecto, veritatis.
+            </p>
+            <a href="#quem-somos" class="explore">Explore o site</a>
+          </div>
+        </div>
+
+        <div id="sobre" class="quem-somos">
+          <section id="quem-somos" class="quem-somos-container">
+            <div class="quem-somos-content">
+              <h2>Quem somos?</h2>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis eos quo, in eligendi magni nam cum! Hic
+                eligendi voluptates, reiciendis aliquid molestiae quaerat harum adipisci! Cumque dicta earum totam
+                maxime! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus, veniam. Fugit odit
+                culpa animi modi laboriosam, quod beatae molestiae quidem nemo illum dignissimos, tenetur excepturi,
+                corporis asperiores id fuga voluptatibus.
+              </p>
+              <p>
+                Quae, distinctio laboriosam! Natus corrupti, consequuntur sequi eos aperiam nam unde ullam ex inventore,
+                sed quod pariatur totam sit commodi iste eum molestias qui voluptatibus explicabo voluptatum consectetur
+                modi est?
+                A temporibus libero commodi sunt dolorem quae doloribus, error architecto nulla labore natus hic!
+                Adipisci, blanditiis facere! Blanditiis, est esse! Tempora architecto, id aliquam nam dolor dicta
+                cupiditate placeat deserunt!
+              </p>
+            </div>
+            <div class="quem-somos-image">
+              <img src="./img/drone_lilas.png" alt="Ilustração de um drone" />
+            </div>
+          </section>
+
+          <section id="cards">
+            <div class="container">
+              <div class="cards">
+                <div class="card">
+                  <div class="icon">
+                    <img class="svg" src="./img/missao.svg" alt="">
+                  </div>
+                  <h3>Missão</h3>
+                  <p class="description">
+                    Projetar, desenvolver e aperfeiçoar drones autônomos com
+                    excelência técnica e inovação, promovendo o aprendizado prático, a
+                    pesquisa aplicada e a formação de profissionais comprometidos com
+                    a ciência, a engenharia e a ética.
+                  </p>
+                </div>
+
+                <div class="card">
+                  <div class="icon">
+                    <img class="svg" src="./img/visao.svg" alt="">
+                  </div>
+                  <h3>Visão</h3>
+                  <p class="description">
+                    Ser referência nacional e internacional em robótica de drones e
+                    aérea acadêmica, contribuindo para o avanço tecnológico e
+                    científico por meio de competições, projetos colaborativos e
+                    impacto educacional.
+                  </p>
+                </div>
+
+                <div class="card">
+                  <div class="icon">
+                    <img class="svg" src="./img/valores.svg" alt="">
+                  </div>
+                  <h3>Valores</h3>
+                  <p class="description">
+                    A Flytec Drones valoriza a inovação, a colaboração e o
+                    compromisso com a excelência técnica. Atuamos com ética,
+                    responsabilidade socioambiental e acreditamos no aprendizado
+                    contínuo como base para o crescimento pessoal e coletivo.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+
+    </section>
+    <section id="equipe" class="secao-areas">
+      <h2>Equipe</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis optio nisi distinctio obcaecati assumenda?
+        Aperiam, voluptate facilis rerum provident eius beatae totam, atque fuga ratione vitae laborum sed numquam.
+        Dolorum!</p>
+        <div class="divisor-xadres"></div>
+      <div class="areas">
+        <div class="content-areas">
+          <div class="blocos">
+            <h3>Mecânica</h3>
+            <div class="icone">
+              <img src="./img/mecanica.png" alt="Mecânica">
+            </div>
+            <p>Desenvolvimento de um projeto mecânico e estrutural,
+              com ênfase na articulação e balanceamento de sistemas para o voo e movimentação do drone.</p>
+          </div>
+
+          <div class="blocos">
+            <h3>Elétrica</h3>
+            <div class="icone">
+              <img src="./img/eletrica.png" alt="Elétrica">
+            </div>
+            <p>Desenvolvimento de circuitos eletrônicos eficientes, integrados aos sistemas de mecânica e navegação.</p>
+          </div>
+
+          <div class="blocos">
+            <h3>Software</h3>
+            <div class="icone">
+              <img src="./img/software.png" alt="Software">
+            </div>
+            <p>Desenvolvimento de sistemas de visão computacional e sensoriamento para garantir a autonomia e
+              inteligência
+              do drone.</p>
+          </div>
+
+          <div class="blocos">
+            <h3>Marketing e Gestão</h3>
+            <div class="icone">
+              <img src="./img/marketinggestao.png" alt="Marketing e Gestão">
+            </div>
+            <p>Planejamento estratégico de marketing, gestão financeira e logística,
+              organização de eventos e gerenciamento da imagem institucional da equipe.</p>
+          </div>
+          <button class="btn-equipe"><span><a href="paginas/equipe/equipe.html">Conheça a equipe</a></span></button>
+        </div>
+      </div>
+    </section>
+    <section id="conquistas" class="secao-participacoes">
+      <div class="participacoes">
+        <h2>Participações</h2>
+
+        <!-- Cartões -->
+        <div class="cartoes">
+          <div class="cartao">
+            <img src="./img/medalha.png" alt="Medalha">
+            <h3>2020</h3>
+            <p> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni necessitatibus voluptatum impedit
+              facilis laboriosam deleniti labore.
+            </p>
+          </div>
+
+          <div class="cartao">
+            <img src="./img/trofeu.png" alt="Troféu">
+            <h3>2015</h3>
+            <p> Lorem ipsum dolor sit amet consectetur, adipisicing elit. A, quis? Itaque incidunt debitis cum minus.
+            </p>
+          </div>
+          <div class="cartao">
+            <img src="./img/coroa-de-louros.png" alt="Coroa de Louros">
+            <h3>2017</h3>
+            <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat omnis corporis doloribus! Numquam
+              suscipit iste.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
-  <footer class="secao-rodape"></footer>
+  <footer class="secao-rodape">
+    <div class="footer">
+      <div class="footer-container">
+        <!-- Coluna Esquerda -->
+        <div class="footer-left">
+          <div class="contato">
+            <h3>Contato:</h3>
+            <p> <span><i class="fa-solid fa-envelope"></i></span> cefast.flytech.drone@gmail.com</p>
+            <p> <span><i class="fa-solid fa-phone"></i></span> (31) 99999-9999</p>
+          </div>
+
+          <div class="social">
+            <h3>Social:</h3>
+            <a href="https://www.instagram.com/cefast_drone?igsh=N3ZveTQzczYxajJ5" target="_blank">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="#">
+              <i class="fa-brands fa-linkedin"></i>
+            </a>
+            <a href="#">
+              <i class="fa-brands fa-facebook"></i>
+            </a>
+            <a href="https://github.com/Cefast-Flytech-Drone" target="_blank">
+              <i class="fa-brands fa-github"></i>
+            </a>
+          </div>
+        </div>
+
+
+        <div class="mapa">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3750.6593075281257!2d-44.0013584247726!3d-19.938756681451665!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa6973f497f73a5%3A0x72e85b0a73d210a1!2sCEFET-MG%20-%20Campus%20Nova%20Gameleira!5e0!3m2!1spt-BR!2sbr!4v1755751054485!5m2!1spt-BR!2sbr"
+            width="400" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade" width="80" height="80" style="border:0;" allowfullscreen=""
+            loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+          <div class="endereço">
+            <h3>Endereço: </h3>
+            <p>Av. Amazonas, 7675 - Nova Gameleira,<br>
+              Belo Horizonte - MG, 30510-000</p>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Linha inferior -->
+      <div class="footer-bottom">
+        <p>© 2025 Equipe Flytec Drones</p>
+      </div>
+    </div>
+  </footer>
+  <script src="load.js"></script>
   <script src="main.js"></script>
-  <script src="./paginas/principal/areas/areas.js"></script>
-  <script src="./paginas/principal/rodape/rodape.js"></script>
-  <script src="./paginas/principal/participacoes/participacoes.js"></script>
-  <script src="./paginas/principal/sobre/sobre.js"></script>
+  <script src="scripts/areas.js"></script>
+  <script src="scripts/rodape.js"></script>
+  <script src="scripts/participacoes.js"></script>
+  <script src="scripts/cabecalho.js"></script>
+  <script src="scripts/sobre.js"></script>
 </body>
+
 </html>

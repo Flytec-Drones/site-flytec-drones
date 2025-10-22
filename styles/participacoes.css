@@ -1,0 +1,94 @@
+
+.participacoes {
+  padding: 40px 20px;
+}
+
+.participacoes h2 {
+  font-size: 40px;
+  font-family: "BioRhyme", serif;
+  color: #2d0a66;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* Cartões */
+.cartoes {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.cartao {
+  position: relative;
+  width: 260px;
+  height: 280px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  background: linear-gradient(#e0d7f5, #e0d7f5) border-box;
+  border: 4px solid transparent;
+  clip-path: polygon(
+    10% 0, 90% 0,
+    100% 10%, 100% 90%,
+    90% 100%, 10% 100%,
+    0 90%, 0 10%
+  );
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.cartao::before {
+  content: "";
+  position: absolute;
+  inset: 4px;
+  background: #fff;
+  clip-path: inherit;
+  z-index: -1;
+}
+
+.cartao h3 {
+  font-size: 25px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #2a2566;
+  margin: 10px 0 10px 0;
+}
+
+.cartao p {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #2a2566;
+  margin-bottom: 10px;
+}
+
+.cartao img {
+  height: 70px;
+  width: 70px;
+}
+
+
+/* Responsividade */
+@media (max-width: 945px) {
+  .participaoes h2 {
+    font-size: 32px
+  }
+
+  .cartoes {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cartao {
+    width: 80%;
+    max-width: 350px;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .participacoes h2 {
+    font-size: 28px;
+  }
+
+  .cartao {
+    width: 90%;
+  }
+}
