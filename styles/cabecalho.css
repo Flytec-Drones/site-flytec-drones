@@ -179,6 +179,7 @@
     .menu {
         display: flex;
         flex-direction: column;
+        justify-content: center;
         background-color: #ffffff;
         border-radius: 0;
         padding: 20px;
@@ -186,6 +187,7 @@
         top: 85px; 
         right: 0;
         width: 50%;
+        height: calc(100vh - 85px);
         text-align: center;
         box-shadow: 0 4px 15px rgba(0,0,0,0.2);
         z-index: 999;
@@ -220,12 +222,10 @@
 @media (max-width: 670px) {
     .menu {
         width: 100%;
-        height: calc(100vh - 80px);
         top: 85px;
         left: 0;
         right: auto;
         box-shadow: none;
-        padding-top: 50%;
     }
     
     .menu.is-active {
