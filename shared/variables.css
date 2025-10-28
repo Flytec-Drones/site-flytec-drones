@@ -1,0 +1,30 @@
+:root {
+  --font-size-normal: 1em;
+  --font-size-h1: 1.2em;
+  --font-size-h2: 1.1em;
+
+  --primary-color: #040053;
+  --secondary-color: #2d0a66;
+  --gray-color: #d9d9d9;
+  --white-color: #f1f1ff;
+  --text-color: #212121;
+
+  --primary-text-color: #2F1E4A;
+  --secondary-text-color: #55446E;
+  --card-background-color: #E6E1EE;
+  --icon-color: #8C6EDF;
+
+  --max-width: min(1300px, 80dvw, 90dvw);
+
+  --tamanho-fonte-normal: var(--font-size-normal);
+  --tamanho-fonte-titulo-1: var(--font-size-h1);
+  --tamanho-fonte-titulo-2: var(--font-size-h2);
+
+  --cor-principal: var(--primary-color);
+  --cor-secundaria: var(--secondary-color);
+  --cor-cinza: var(--gray-color);
+  --cor-branco: var(--white-color);
+  --cor-preto: var(--text-color);
+
+  --largura-geral: var(--max-width);
+}

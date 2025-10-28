@@ -1,13 +1,13 @@
 main {
-    padding-top: 200px;
+    min-height: 40vw;
 }
 
 .img-equipe {
     position: absolute;
     left: 0;
     width: 100vw;
-    height: 300px;
-    background-image: url('https://dummyimage.com/1980x1080/000/fff&text=Imagem+da+Equipe');
+    height: 100dvh;
+    background-image: url('https://dummyimage.com/1980x1080/222/fff&text=Imagem+da+Equipe');
     background-size: cover;
     background-position: center;
     margin-bottom: 40px;

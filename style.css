@@ -7,25 +7,6 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
-:root {
-  --tamanho-fonte-normal: 1em;
-  --tamanho-fonte-titulo-1: 1.2em;
-  --tamanho-fonte-titulo-2: 1.1em;
-
-  --cor-principal: #040053;
-  --cor-secundaria: #2d0a66;
-  --cor-cinza: #d9d9d9;
-  --cor-branco: #f1f1ff;
-  --cor-preto: #212121;
-
-  --primary-text-color: #2F1E4A;
-  --secondary-text-color: #55446E;
-  --card-background-color: #E6E1EE;
-  --icon-color: #8C6EDF;
-
-  --largura-geral: min(1300px, 80dvw, 90dvw);
-}
-
 html {
   overflow-x: hidden;
   scroll-behavior: smooth;
@@ -33,39 +14,43 @@ html {
 
 main {
   margin: 0 auto;
-  width: var(--largura-geral);
+  width: var(--max-width);
 }
 
 h1,
 h2,
 h3 {
-    font-family: "BioRhyme", serif;
-    font-weight: 800;
-    color: var(--cor-secundaria);
-    margin-bottom: 1rem;
+  font-family: "BioRhyme", serif;
+  font-weight: 800;
+  color: var(--secondary-color);
+  margin-bottom: 1rem;
 }
 
 h1 {
-    font-size: 3rem;
-    color: var(--cor-branco);
+  font-size: 3rem;
+  color: var(--white-color);
 }
 
 h2 {
-    margin-top: 30px;
-    font-size: 2.25rem;
+  margin-top: 30px;
+  font-size: 2.25rem;
 }
 
 h3 {
-    font-size: 2rem;
-    color: var(--cor-branco);
+  font-size: 2rem;
+  color: var(--white-color);
 }
 
-/** Loading Screen **/
+p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
 #loading-screen {
   position: fixed;
   width: 100vw;
   height: 100vh;
-  background-color: var(--cor-branco);
+  background-color: var(--white-color);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -74,7 +59,7 @@ h3 {
 
 .spinner {
   border: 8px solid #f3f3f3;
-  border-top: 8px solid var(--cor-principal);
+  border-top: 8px solid var(--primary-color);
   border-radius: 50%;
   width: 60px;
   height: 60px;

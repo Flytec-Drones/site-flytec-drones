@@ -1,41 +1,45 @@
-.areas {
+#team h2 {
+     color: var(--primary-color);
+}
+
+.team__areas {
     width: 100vw;
     margin-left: calc(-50vw + 50%);
     width: 100vw;
 }
 
-.divisor-xadres {
+.team__divider {
     margin: 32px 0 0 0;
     height: 40px;
     width: 100%;
     background-color: #fff;
     background-image:
-    linear-gradient(45deg, var(--cor-principal) 25%, transparent 25%, transparent 75%, var(--cor-principal) 75%, var(--cor-principal)),
-    linear-gradient(45deg, var(--cor-principal) 25%, transparent 25%, transparent 75%, var(--cor-principal) 75%, var(--cor-principal));
-    background-size: 40px 40px  ; /* tamanho dos quadrados */
-    background-position: 0 0, 20px 20px; /* desloca a segunda camada para criar o padrão */
+     linear-gradient(45deg, var(--primary-color) 25%, transparent 25%, transparent 75%, var(--primary-color) 75%, var(--primary-color)),
+     linear-gradient(45deg, var(--primary-color) 25%, transparent 25%, transparent 75%, var(--primary-color) 75%, var(--primary-color));
+    background-size: 40px 40px;
+    background-position: 0 0, 20px 20px;
 }
 
-.content-areas {
+.team__content {
     display: grid;
     justify-content: center;
     grid-template-columns: repeat(4, 1fr);
-    background-color: var(--cor-principal);
+     background-color: var(--primary-color);
     justify-items: center;
     padding: 0px 20px 20px 20px;
-    width: var(--largura-geral);
+     width: var(--max-width);
     margin: 0 auto;
     border-radius: 0 0 16px 16px;
 }
 
-.areas .blocos {
+.team__areas .team__block {
     text-align: center;   
     max-width: 250px;
     color: white;
     position: static;
 }
 
-.areas .icone {
+.team__areas .team__icon {
     position: relative;
     width: 120px;
     height: 120px;
@@ -45,46 +49,46 @@
     align-items: center;
     justify-content: center;
     margin: 0 auto 15px;
-    border: 3px solid var(--cor-principal);
+     border: 3px solid var(--primary-color);
     transition: all .5s;
 }
 
-.areas .icone img {
+.team__areas .team__icon img {
     position: absolute;
     width: 50%;
     height: 50%;
     transition: all .5s;
 }
 
-.areas .icone:hover{
+.team__areas .team__icon:hover{
     /* transform: scale(0.9); */
     box-shadow: 0 0 20px rgba(19, 0, 74, 0.5);
     border: 3px solid #18022d;
     cursor: pointer;
 }
 
-.areas .icone:hover img {
+.team__areas .team__icon:hover img {
     width: 60%;
     height: 60%;
 }
 
-.areas h2 {
-    color: var(--cor-principal);
+.team__areas h2 {
+     color: var(--primary-color);
 }
 
-.areas h3 {
+.team__areas h3 {
     font-size: 1.1rem;
     margin: 1rem 0;
     color: white;
 }
 
-.areas p {
+.team__areas p {
     margin: 0;
     position: static;
     text-align: center;
 }
 
-.areas .btn-equipe {
+.team__areas .team__button {
     grid-column: span 4;
     position: relative;
     background-color: white;
@@ -148,9 +152,6 @@
 }
 
 @media (max-width: 550px) {
-    .content-areas {
-        /* grid-template-columns: 1fr; */
-    }
     .blocos {
         width: 200px;
     }
