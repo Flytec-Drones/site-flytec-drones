@@ -88,7 +88,7 @@
     text-align: center;
 }
 
-.team__areas .team__button {
+.team__button {
     grid-column: span 4;
     position: relative;
     background-color: white;
@@ -103,7 +103,7 @@
     transition: all 0.3s ease;
 }
 
-.areas .btn-equipe span {
+.team__button span {
     position: relative;
     z-index: 2;
     font-family: "BioRhyme", serif;
@@ -111,7 +111,7 @@
     font-size: 1rem;
 }
 
-.areas .btn-equipe::before {
+.team__button::before {
     content: '';
     position: absolute;
     top: 0;
@@ -132,40 +132,40 @@
     z-index: 1;
     transition: opacity 0.5s ease, background-position 0.5s ease;
 }
-.areas .btn-equipe:hover {
+.team__button:hover {
     color: white;
 }
 
-.areas .btn-equipe:hover::before {
+.team__button:hover::before {
     opacity: 1;
     animation: movimento-continuo 4s ease infinite;
 }
 
 @media (max-width: 1230px) {
-    .content-areas {
+    .team__content {
         grid-template-columns: repeat(2, 2fr);
     }
 
-    .areas .btn-equipe {
+    .team__button {
         grid-column: span 2;
     }
 }
 
 @media (max-width: 550px) {
-    .blocos {
+    .team__block {
         width: 200px;
     }
 }
 
 @media (max-width: 690px) {
-    .content-areas {
+    .team__content {
         grid-template-columns: 1fr;
     }
-    .blocos {
+    .team__block {
         max-width: 250px;
     }
 
-    .areas .btn-equipe {
+    .team__button {
         grid-column: span 1;
     }
 }
