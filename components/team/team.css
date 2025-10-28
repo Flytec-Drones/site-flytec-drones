@@ -1,5 +1,6 @@
 #team h2 {
      color: var(--primary-color);
+     scroll-margin-top: calc(var(--header-height) + 1rem);
 }
 
 .team__areas {
