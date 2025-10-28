@@ -95,15 +95,26 @@
     border-radius: 30px;
     padding: 8px 20px;
     text-decoration: none;
-    color: #2a2566;
     margin-top: 20px;
     overflow: hidden;
-    border: none;
-    cursor: pointer;
     transition: all 0.3s ease;
 }
 
+.team__button-button {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+}
+
+.team__button a {
+    text-decoration: none;
+    color: inherit;
+}
+
 .team__button span {
+    color: #2a2566;
     position: relative;
     z-index: 2;
     font-family: "BioRhyme", serif;
@@ -132,7 +143,7 @@
     z-index: 1;
     transition: opacity 0.5s ease, background-position 0.5s ease;
 }
-.team__button:hover {
+.team__button:hover span {
     color: white;
 }
 
