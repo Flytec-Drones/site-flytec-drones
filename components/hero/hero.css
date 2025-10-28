@@ -60,3 +60,9 @@
 .explore:hover {
     background-color: var(--primary-color);
 }
+
+@media (max-width: 440px) {
+    .hero__content h1 {
+        line-height: 1;
+    }
+}

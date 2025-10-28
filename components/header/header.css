@@ -1,6 +1,6 @@
 .header {
   background-color: var(--primary-color);
-  padding: 5px 30px;
+  padding: 20px 30px;
   position: fixed;
   top: 0;
   left: 0;
@@ -162,7 +162,7 @@
     transform: translateY(-8px) rotate(-45deg);
 }
 
-@media (max-width: 945px) {
+@media (max-width: 977px) {
     .header__hamburger {
         display: block;
     }
@@ -226,4 +226,19 @@
     .header__nav a {
       font-size: 25px;
     }
+}
+
+@media (max-width: 485px) {
+  .header__logo img {
+    margin: 0;
+  }
+  .header__cta {
+    margin-left: 16px;
+  }
+}
+
+@media (max-width: 392px) {
+  .header__cta {
+    padding: 8px 2vw;
+  }
 }
