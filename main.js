@@ -1,17 +1,25 @@
-// function carregarHTML(url, seletorDestino) {
-//   fetch(url)
-//     .then(resposta => {
-//       if (!resposta.ok) throw new Error(`Erro ao carregar ${url}`);
-//       return resposta.text();
-//     })
-//     .then(html => {
-//       document.querySelector(seletorDestino).innerHTML = html;
-//     })
-//     .catch(error => console.error(error));
-// }
+function carregarHTML(url, seletorDestino) {
+  fetch(url)
+    .then(resposta => {
+      if (!resposta.ok) throw new Error(`Erro ao carregar ${url}`);
+      return resposta.text();
+    })
+    .then(html => {
+      const destino = document.querySelector(seletorDestino);
+      if (!destino) {
+        console.error(`Selector não encontrado: '${seletorDestino}' ao carregar ${url}`);
+        return;
+      }
+      destino.innerHTML = html;
+      const event = new CustomEvent('componentLoaded', { detail: { selector: seletorDestino } });
+      document.dispatchEvent(event);
+    })
+    .catch(error => console.error(error));
+}
 
-// carregarHTML("./paginas/principal/cabecalho/cabecalho.html", ".secao-cabecalho");
-// carregarHTML("./paginas/principal/sobre/sobre.html", ".secao-sobre")
-// carregarHTML("./paginas/principal/areas/areas.html", ".secao-areas");
-// carregarHTML("./paginas/principal/participacoes/participacoes.html", ".secao-participacoes");
-// carregarHTML("./paginas/principal/rodape/rodape.html", ".secao-rodape");
+carregarHTML("./components/header/header.html", ".header");
+carregarHTML("./components/hero/hero.html", ".hero");
+carregarHTML("./components/about/about.html", ".about");
+carregarHTML("./components/team/team.html", ".team");
+carregarHTML("./components/achievements/achievements.html", ".achievements");
+carregarHTML("./components/footer/footer.html", ".footer");
