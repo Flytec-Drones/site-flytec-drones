@@ -1,3 +1,7 @@
+/* ======================================== */
+/* SEÇÃO ABOUT (QUEM SOMOS)        */
+/* ======================================== */
+
 .about__section {
     padding: 4rem 0;
 }
@@ -17,7 +21,7 @@
 }
 
 .about__content p {
-    max-width: calc((var(--max-width) - 500px));
+    max-width: calc((var(--max-width, 1200px) - 500px));
     margin-bottom: 1rem;
 }
 
@@ -38,6 +42,10 @@
     height: auto;
 }
 
+/* ======================================== */
+/* CARDS (MISSÃO, VISÃO)         */
+/* ======================================== */
+
 .about__cards-wrapper {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -51,26 +59,19 @@
     padding: 2rem;
     border-radius: 1rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: all 0.5s ease-in-out;
-    overflow: hidden;
-    height: 12rem;
+    
+    /* Esta é a animação que causa a "travadinha" */
+    /* Mas é a mais confiável para o layout */
+    transition: all 0.5s ease-in-out; 
+    
+    overflow: hidden; /* Essencial para 'max-height' funcionar */
+    height: 12rem;   /* Altura fixa quando fechado */
     cursor: pointer;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center; /* Centraliza no estado fechado */
     text-align: center;
-}
-
-.about__card:hover {
-    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
-    transform: translateY(-0.25rem);
-    height: auto;
-    justify-content: flex-start;
-}
-
-.about__card.expanded {
-    height: auto;
-    justify-content: flex-start;
 }
 
 .about__card-icon {
@@ -88,15 +89,43 @@
     opacity: 0;
     max-height: 0;
     overflow: hidden;
+    /* Incluímos margin-top na transição */
     transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out, margin-top 0.5s ease-in-out;
+}
+
+/* --- ESTADOS DE EXPANSÃO --- */
+
+/* 1. Desktop: Hover (passar o mouse) e Expanded (clique) */
+.about__card:hover,
+.about__card.expanded {
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+    transform: translateY(-0.25rem);
+    height: auto; /* Permite o card crescer */
+    justify-content: flex-start;
 }
 
 .about__card:hover .about__card-description,
 .about__card.expanded .about__card-description {
     opacity: 1;
+    max-height: 200px; /* Limite da descrição */
+    margin-top: 1rem;
+}
+
+/* 2. Mobile: Active (scroll) */
+.about__card.active {
+    height: auto;
+    justify-content: flex-start;
+}
+
+.about__card.active .about__card-description {
+    opacity: 1;
     max-height: 200px;
     margin-top: 1rem;
 }
+
+/* ======================================== */
+/* MEDIA QUERIES               */
+/* ======================================== */
 
 @media (max-width: 1024px) {
     .about__image {
@@ -112,6 +141,27 @@
     }
 }
 
+/* Ponto de quebra do JS (Mobile) */
+@media (max-width: 900px) {
+
+    .about__card {
+        cursor: default;
+    }
+
+    .about__card:hover {
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transform: none;
+        height: 12rem;
+        justify-content: center;
+    }
+
+    .about__card:hover .about__card-description {
+        opacity: 0;
+        max-height: 0;
+        margin-top: 0;
+    }
+}
+
 @media (max-width: 768px) {
     .hero {
         height: 90vh;
@@ -123,19 +173,5 @@
 
     .about__container {
         flex-direction: column;
-    }
-
-    .card {
-        height: auto;
-    }
-
-    .card .description {
-        transform: translateY(0);
-        opacity: 1;
-        margin-top: 1rem;
-    }
-
-    .card:hover {
-        transform: none;
     }
 }

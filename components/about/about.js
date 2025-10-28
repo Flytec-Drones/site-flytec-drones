@@ -8,39 +8,41 @@ function initializeAboutCards() {
 
     const isMobile = window.innerWidth < 900;
 
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            const card = entry.target;
-            if (entry.isIntersecting) {
-                if (isMobile) {
-                    card.classList.add('active');
+    if (isMobile) {
+        // --- LÓGICA PARA MOBILE (Ativar com Scroll) ---
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                const card = entry.target;
+                if (entry.isIntersecting) {
+                    card.classList.add('active'); // Adiciona .active
                 } else {
-                    card.classList.add('expanded');
+                    card.classList.remove('active'); // Remove .active
                 }
-            } else {
-                if (isMobile) {
-                    card.classList.remove('active');
-                } else {
-                    card.classList.remove('expanded');
-                }
-            }
+            });
+        }, {
+            // 70% centrais da tela (aproximado com threshold e rootMargin)
+            threshold: 0.7, 
+            rootMargin: '0px 0px -30% 0px' 
         });
-    }, {
-        threshold: isMobile ? 0.8 : 0.5,
-        rootMargin: isMobile ? '0px 0px -40% 0px' : '0px'
-    });
 
-    mvvCards.forEach(card => observer.observe(card));
+        mvvCards.forEach(card => observer.observe(card));
 
-    mvvCards.forEach(card => {
-        card.addEventListener('click', () => {
-            if (isMobile) {
-                card.classList.toggle('active');
-            } else {
+    } else {
+        // --- LÓGICA PARA DESKTOP (Ativar com Click) ---
+        mvvCards.forEach(card => {
+            card.addEventListener('click', () => {
+                // Opcional: fecha outros cards ao clicar em um novo
+                mvvCards.forEach(otherCard => {
+                    if (otherCard !== card) {
+                        otherCard.classList.remove('expanded');
+                    }
+                });
+                
+                // Abre/fecha o card clicado
                 card.classList.toggle('expanded');
-            }
+            });
         });
-    });
+    }
 }
 
 // Inicia a verificação dos cards assim que o script é carregado
