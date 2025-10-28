@@ -1,7 +1,3 @@
-/* ======================================== */
-/* SEÇÃO ABOUT (QUEM SOMOS)        */
-/* ======================================== */
-
 .about__section {
     padding: 4rem 0;
 }
@@ -42,10 +38,6 @@
     height: auto;
 }
 
-/* ======================================== */
-/* CARDS (MISSÃO, VISÃO)         */
-/* ======================================== */
-
 .about__cards-wrapper {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -60,17 +52,14 @@
     border-radius: 1rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     
-    /* Esta é a animação que causa a "travadinha" */
-    /* Mas é a mais confiável para o layout */
-    transition: all 0.5s ease-in-out; 
+    transition: none; /* SEM ANIMAÇÃO NO MOBILE */
+    height: auto;     /* ALTURA AUTOMÁTICA (ABERTO) */
+    cursor: default;  /* SEM MÃOZINHA */
     
-    overflow: hidden; /* Essencial para 'max-height' funcionar */
-    height: 12rem;   /* Altura fixa quando fechado */
-    cursor: pointer;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center; /* Centraliza no estado fechado */
+    justify-content: flex-start; /* Alinhado ao topo */
     text-align: center;
 }
 
@@ -86,46 +75,11 @@
 
 .about__card-description {
     text-align: center;
-    opacity: 0;
-    max-height: 0;
-    overflow: hidden;
-    /* Incluímos margin-top na transição */
-    transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out, margin-top 0.5s ease-in-out;
-}
-
-/* --- ESTADOS DE EXPANSÃO --- */
-
-/* 1. Desktop: Hover (passar o mouse) e Expanded (clique) */
-.about__card:hover,
-.about__card.expanded {
-    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
-    transform: translateY(-0.25rem);
-    height: auto; /* Permite o card crescer */
-    justify-content: flex-start;
-}
-
-.about__card:hover .about__card-description,
-.about__card.expanded .about__card-description {
     opacity: 1;
-    max-height: 200px; /* Limite da descrição */
+    max-height: 400px; /* Apenas um limite seguro */
     margin-top: 1rem;
+    transition: none; /* SEM ANIMAÇÃO */
 }
-
-/* 2. Mobile: Active (scroll) */
-.about__card.active {
-    height: auto;
-    justify-content: flex-start;
-}
-
-.about__card.active .about__card-description {
-    opacity: 1;
-    max-height: 200px;
-    margin-top: 1rem;
-}
-
-/* ======================================== */
-/* MEDIA QUERIES               */
-/* ======================================== */
 
 @media (max-width: 1024px) {
     .about__image {
@@ -141,26 +95,45 @@
     }
 }
 
-/* Ponto de quebra do JS (Mobile) */
-@media (max-width: 900px) {
-
+/* * ESTADO DESKTOP (SOBRESCRITA): FECHADO E INTERATIVO
+ */
+@media (min-width: 901px) {
+    
+    /* Re-introduz o estado FECHADO no desktop */
     .about__card {
-        cursor: default;
+        transition: all 0.5s ease-in-out; 
+        overflow: hidden; 
+        height: 12rem;   
+        cursor: pointer;
+        justify-content: center; 
     }
 
-    .about__card:hover {
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        transform: none;
-        height: 12rem;
-        justify-content: center;
-    }
-
-    .about__card:hover .about__card-description {
+    /* Re-introduz a descrição ESCONDIDA no desktop */
+    .about__card-description {
         opacity: 0;
         max-height: 0;
+        overflow: hidden;
         margin-top: 0;
+        transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out, margin-top 0.5s ease-in-out;
+    }
+
+    /* Re-introduz as regras de EXPANSÃO (HOVER E CLIQUE) */
+    .about__card:hover,
+    .about__card.expanded {
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+        transform: translateY(-0.25rem);
+        height: auto;
+        justify-content: flex-start;
+    }
+
+    .about__card:hover .about__card-description,
+    .about__card.expanded .about__card-description {
+        opacity: 1;
+        max-height: 200px; 
+        margin-top: 1rem;
     }
 }
+
 
 @media (max-width: 768px) {
     .hero {

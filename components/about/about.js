@@ -8,30 +8,9 @@ function initializeAboutCards() {
 
     const isMobile = window.innerWidth < 900;
 
-    if (isMobile) {
-        // --- LÓGICA PARA MOBILE (Ativar com Scroll) ---
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                const card = entry.target;
-                if (entry.isIntersecting) {
-                    card.classList.add('active'); // Adiciona .active
-                } else {
-                    card.classList.remove('active'); // Remove .active
-                }
-            });
-        }, {
-            // 70% centrais da tela (aproximado com threshold e rootMargin)
-            threshold: 0.7, 
-            rootMargin: '0px 0px -30% 0px' 
-        });
-
-        mvvCards.forEach(card => observer.observe(card));
-
-    } else {
-        // --- LÓGICA PARA DESKTOP (Ativar com Click) ---
+    if (!isMobile) {
         mvvCards.forEach(card => {
             card.addEventListener('click', () => {
-                // Opcional: fecha outros cards ao clicar em um novo
                 mvvCards.forEach(otherCard => {
                     if (otherCard !== card) {
                         otherCard.classList.remove('expanded');
@@ -43,6 +22,7 @@ function initializeAboutCards() {
             });
         });
     }
+    // Se for mobile, nada acontece. Os cards serão controlados pelo CSS.
 }
 
 // Inicia a verificação dos cards assim que o script é carregado
