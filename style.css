@@ -22,7 +22,7 @@ h2,
 h3 {
   font-family: "BioRhyme", serif;
   font-weight: 800;
-  color: var(--secondary-color);
+  color: var(--violeta);
   margin-bottom: 1rem;
 }
 
@@ -60,7 +60,7 @@ p {
 
 .spinner {
   border: 8px solid #f3f3f3;
-  border-top: 8px solid var(--primary-color);
+  border-top: 8px solid var(--violeta);
   border-radius: 50%;
   width: 60px;
   height: 60px;

@@ -6,7 +6,7 @@
 .achievements h2 {
   /* font-size: 40px; */
   font-family: "BioRhyme", serif;
-  color: var(--secondary-color);
+  color: var(--violeta);
   margin-bottom: 30px;
   text-align: center;
 }
@@ -39,7 +39,7 @@
   content: "";
   position: absolute;
   inset: 4px;
-  background: #fff;
+  background: var(--card-background-color);
   clip-path: inherit;
   z-index: -1;
 }
