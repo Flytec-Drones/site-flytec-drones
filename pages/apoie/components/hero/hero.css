@@ -1,0 +1,88 @@
+.hero {
+  text-align: center;
+}
+
+.hero__content {
+  height: 100vh;
+  width: 100vw;
+  padding-top: 128px;
+  background-color: #040053db;
+
+  position: relative;
+  top: 0;
+  left: 50%;
+  margin-left: -50vw;
+}
+
+.hero__description {
+  margin: auto;
+  width: 50vw;
+  color: #fff;
+}
+
+.hero__button-btn1 {
+  --c1: var(--primary-color);
+  --c2: #fff;
+  /* --c2: var(); */
+  --size-letter: 20px;
+  margin-top: 16px;
+  padding: 0.5em 1em;
+  font-size: var(--size-letter);
+
+  background-color: transparent;
+  border: calc(var(--size-letter) / 6) solid var(--c2);
+  border-radius: 0.2em;
+  cursor: pointer;
+
+  overflow: hidden;
+  position: relative;
+  transition: 300ms cubic-bezier(0.83, 0, 0.17, 1);
+}
+
+.hero__button-btn1 > .text {
+  font-weight: 700;
+  color: var(--c2);
+  position: relative;
+  z-index: 1;
+  transition: color 700ms cubic-bezier(0.83, 0, 0.17, 1);
+}
+
+.hero__button-btn1::before {
+  top: 0;
+  left: 0;
+}
+
+.hero__button-btn1::after {
+  top: 100%;
+  left: 100%;
+}
+
+.hero__button-btn1::before,
+.hero__button-btn1::after {
+  content: "";
+  width: 150%;
+  aspect-ratio: 1/1;
+  scale: 0;
+  transition: 500ms cubic-bezier(0.76, 0, 0.24, 1);
+
+  background-color: var(--c2);
+  border-radius: 50%;
+
+  position: absolute;
+  translate: -50% -50%;
+}
+
+.hero__button-btn1:hover {
+  & > span {
+    color: var(--c1);
+  }
+  &::before,
+  &::after {
+    scale: 1;
+  }
+}
+
+.hero__button-btn1:active {
+  scale: 0.98;
+  filter: brightness(0.9);
+}
