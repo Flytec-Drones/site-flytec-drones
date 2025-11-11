@@ -1,5 +1,5 @@
 #team h2 {
-     color: var(--primary-color);
+     color: var(--violeta);
      scroll-margin-top: calc(var(--header-height) + 1rem);
 }
 
@@ -15,8 +15,8 @@
     width: 100%;
     background-color: #fff;
     background-image:
-     linear-gradient(45deg, var(--primary-color) 25%, transparent 25%, transparent 75%, var(--primary-color) 75%, var(--primary-color)),
-     linear-gradient(45deg, var(--primary-color) 25%, transparent 25%, transparent 75%, var(--primary-color) 75%, var(--primary-color));
+     linear-gradient(45deg, var(--violeta) 25%, transparent 25%, transparent 75%, var(--violeta) 75%, var(--violeta)),
+     linear-gradient(45deg, var(--violeta) 25%, transparent 25%, transparent 75%, var(--violeta) 75%, var(--violeta));
     background-size: 40px 40px;
     background-position: 0 0, 20px 20px;
 }
@@ -25,7 +25,7 @@
     display: grid;
     justify-content: center;
     grid-template-columns: repeat(4, 1fr);
-     background-color: var(--primary-color);
+     background-color: var(--violeta);
     justify-items: center;
     padding: 0px 20px 20px 20px;
      width: var(--max-width);
@@ -45,12 +45,12 @@
     width: 120px;
     height: 120px;
     border-radius: 50%;
-    background-color: #18022d;
+    background-color: var(--text-color);
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 0 auto 15px;
-     border: 3px solid var(--primary-color);
+     border: 3px solid var(--violeta);
     transition: all .5s;
 }
 
@@ -74,7 +74,7 @@
 }
 
 .team__areas h2 {
-     color: var(--primary-color);
+     color: var(--violeta);
 }
 
 .team__areas h3 {
@@ -115,7 +115,7 @@
 }
 
 .team__button span {
-    color: #2a2566;
+    color: var(--violeta);
     position: relative;
     z-index: 2;
     font-family: "BioRhyme", serif;
@@ -134,7 +134,7 @@
     font-family: "BioRhyme", serif;
     font-weight: 700;
 
-    background: linear-gradient(45deg, rgba(63, 94, 251, 1) 0%, rgba(252, 70, 107, 1) 100%);
+    background: linear-gradient(45deg, var(--roxo) 0%, var(--amarelo) 100%);
     background-size: 200% 200%;
     background-position: 0% 50%;
 

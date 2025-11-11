@@ -46,7 +46,7 @@
 }
 
 .about__card {
-    background-color: var(--primary-color);
+    background-color: var(--violeta);
     color: var(--white-color);
     padding: 2rem;
     border-radius: 1rem;
