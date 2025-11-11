@@ -1,0 +1,189 @@
+#team h2 {
+     color: var(--primary-color);
+     scroll-margin-top: calc(var(--header-height) + 1rem);
+}
+
+.team__areas {
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    width: 100vw;
+}
+
+.team__divider {
+    margin: 32px 0 0 0;
+    height: 40px;
+    width: 100%;
+    background-color: #fff;
+    background-image:
+     linear-gradient(45deg, var(--primary-color) 25%, transparent 25%, transparent 75%, var(--primary-color) 75%, var(--primary-color)),
+     linear-gradient(45deg, var(--primary-color) 25%, transparent 25%, transparent 75%, var(--primary-color) 75%, var(--primary-color));
+    background-size: 40px 40px;
+    background-position: 0 0, 20px 20px;
+}
+
+.team__content {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(4, 1fr);
+     background-color: var(--primary-color);
+    justify-items: center;
+    padding: 0px 20px 20px 20px;
+     width: var(--max-width);
+    margin: 0 auto;
+    border-radius: 0 0 16px 16px;
+}
+
+.team__areas .team__block {
+    text-align: center;   
+    max-width: 250px;
+    color: white;
+    position: static;
+}
+
+.team__areas .team__icon {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: #18022d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 15px;
+     border: 3px solid var(--primary-color);
+    transition: all .5s;
+}
+
+.team__areas .team__icon img {
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    transition: all .5s;
+}
+
+.team__areas .team__icon:hover{
+    /* transform: scale(0.9); */
+    box-shadow: 0 0 20px rgba(19, 0, 74, 0.5);
+    border: 3px solid #18022d;
+    cursor: pointer;
+}
+
+.team__areas .team__icon:hover img {
+    width: 60%;
+    height: 60%;
+}
+
+.team__areas h2 {
+     color: var(--primary-color);
+}
+
+.team__areas h3 {
+    font-size: 1.1rem;
+    margin: 1rem 0;
+    color: white;
+}
+
+.team__areas p {
+    margin: 0;
+    position: static;
+    text-align: center;
+}
+
+.team__button {
+    grid-column: span 4;
+    position: relative;
+    background-color: white;
+    border-radius: 30px;
+    padding: 8px 20px;
+    text-decoration: none;
+    margin-top: 20px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.team__button-button {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+}
+
+.team__button a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.team__button span {
+    color: #2a2566;
+    position: relative;
+    z-index: 2;
+    font-family: "BioRhyme", serif;
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.team__button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    font-family: "BioRhyme", serif;
+    font-weight: 700;
+
+    background: linear-gradient(45deg, rgba(63, 94, 251, 1) 0%, rgba(252, 70, 107, 1) 100%);
+    background-size: 200% 200%;
+    background-position: 0% 50%;
+
+    border-radius: 30px;
+
+    opacity: 0;
+    z-index: 1;
+    transition: opacity 0.5s ease, background-position 0.5s ease;
+}
+.team__button:hover span {
+    color: white;
+}
+
+.team__button:hover::before {
+    opacity: 1;
+    animation: movimento-continuo 4s ease infinite;
+}
+
+@media (max-width: 1230px) {
+    .team__content {
+        grid-template-columns: repeat(2, 2fr);
+    }
+
+    .team__button {
+        grid-column: span 2;
+    }
+}
+
+@media (max-width: 550px) {
+    .team__block {
+        width: 200px;
+    }
+}
+
+@media (max-width: 690px) {
+    .team__content {
+        grid-template-columns: 1fr;
+    }
+    .team__block {
+        max-width: 250px;
+    }
+
+    .team__button {
+        grid-column: span 1;
+    }
+}
+
+@keyframes movimento-continuo {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}

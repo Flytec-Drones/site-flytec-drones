@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flytec Drones</title>
+  <link rel="stylesheet" href="../../style.css">
+  <link rel="stylesheet" href="../../shared/variables.css">
+  <link rel="stylesheet" href="../../components/header/header.css">
+  <link rel="stylesheet" href="../../components/footer/footer.css">
+  <link rel="stylesheet" href="apoie.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+
+  <div id="loading-screen">
+    <div class="spinner"></div>
+  </div>
+
+  <header class="header">
+  </header>
+  <main>
+    <section class="hero">
+      <h1 class="hero__title">Construa um futuro com <br />o Flytec Drones</h1>
+      <p class="hero__description">
+        Ao patrocinar o Flytec Dronesh, você fortalece a inovação no ensino
+        público e associa sua marca à educação e responsabilidade social.
+      </p>
+    </section>
+
+    <section class="support">
+      <h2 class="support__title">Por que apoiar?</h2>
+      <div class="support__cards">
+        <div class="support__card">
+          <img src="../../img/graduate-hat.png" alt="Chapéu de formatura" class="support__card-icon">
+          <p class="support__card-text">Associar a sua marca à inovação e educação</p>
+        </div>
+        <div class="support__card">
+          <img src="../../img/public-relation.png" alt="Megafone" class="support__card-icon">
+          <p class="support__card-text">Visibilidade e reconhecimento</p>
+        </div>
+        <div class="support__card">
+          <img src="../../img/globe.png" alt="Planeta com broto" class="support__card-icon">
+          <p class="support__card-text">Impacto social direto</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact">
+      <form class="contact__form" action="https://formsubmit.co/FLYTECDRONE@EMAIL.AQUI" method="POST">
+        <h2 class="contact__title">Entre em contato</h2>
+        <div class="contact__row">
+          <div class="contact__group">
+            <label for="name">Nome</label>
+            <input type="text" id="name" name="nome" placeholder="Nome" required />
+          </div>
+          <div class="contact__group">
+            <label for="message">Deixe sua mensagem aqui</label>
+            <textarea id="message" name="mensagem" rows="4" placeholder="Deixe sua mensagem aqui" required></textarea>
+          </div>
+        </div>
+        <div class="contact__row">
+          <div class="contact__group">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" placeholder="E-mail" required />
+          </div>
+        </div>
+        <div class="g-recaptcha" data-sitekey="6LcHC-orAAAAAHhrkUmZ7KdmmDHJOS5lZsdKA-Qw"></div>
+        <input type="hidden" name="_next" value="http://localhost:5500/paginas/obrigado/obrigado.html">
+        <button type="submit" class="contact__submit">Enviar</button>
+      </form>
+    </section>
+  </main>
+  <footer class="footer">
+    
+  </footer>
+  <script src="../../load.js"></script>
+  <script src="apoie.js"></script>
+  <script src="components/header/header.js"></script>
+  <script src="components/footer/footer.js"></script>
+</body>
+
+</html>

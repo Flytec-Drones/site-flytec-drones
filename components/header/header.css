@@ -1,6 +1,6 @@
-.cabecalho {
-  background-color: var(--cor-principal);
-  padding: 5px 30px;
+.header {
+  background-color: var(--primary-color);
+  padding: 8px 30px;
   position: fixed;
   top: 0;
   left: 0;
@@ -8,40 +8,33 @@
   z-index: 1000;
 }
 
-.content {
+.header__content {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
-  max-width: var(--largura-geral);
+  max-width: var(--max-width);
 }
 
-/* Logo */
-.logo img {
+.header__logo img {
     height: 70px;
     width: 80px;
     margin-right: 50px;
 }
 
-/* Cabeçalho */
-.nav {
+.header__nav {
   display: flex;
   justify-content: space-between;
 }
 
-.nav a:hover {
-  background: #964f4f;
-}
-
-/* Menu */
-.menu {
+.header__nav {
   display: inline-flex;
   background-color: white;
   border-radius: 30px;
   padding: 8px 20px;
 }
 
-.menu a {
+.header__nav a {
   position: relative;
   text-decoration: none;
   color: black;
@@ -51,30 +44,30 @@
   transition: color 0.3s ease;
 }
 
-.menu a:hover {
-  color: var(--cor-principal);
+.header__nav a:hover {
+  color: var(--primary-color);
 }
 
-.menu a::after {
+.header__nav a::after {
   content: "";
   position: absolute;
   bottom: -4px;
   left: 0;
   width: 0%;
   height: 2px;
-  background-color: var(--cor-principal);
+  background-color: var(--primary-color);
   transition: width 0.3s ease;
 }
 
-.menu a:hover::after {
+.header__nav a:hover::after {
   width: 100%;
 }
 
-.menu a + a {
+.header__nav a + a {
   border-left: 1px solid #ccc;
 }
 
-.apoie-projeto {
+.header__cta {
   position: relative;
   background-color: white;
   border-radius: 30px;
@@ -87,14 +80,14 @@
 }
 
 
-.apoie-projeto span {
+.header__cta span {
   position: relative;
   z-index: 2;
   font-family: "BioRhyme", serif;
   font-weight: 700;
 }
 
-.apoie-projeto::before {
+.header__cta::before {
   content: '';
   position: absolute;
   top: 0;
@@ -116,28 +109,26 @@
   transition: opacity 0.5s ease, background-position 0.5s ease;
 }
 
-.apoie-projeto:hover {
+.header__cta:hover {
   color: white;
 }
 
-.apoie-projeto:hover::before {
+.header__cta:hover::before {
   opacity: 1;
-  animation: movimento-continuo 4s ease infinite;
+  animation: continuous-move 4s ease infinite;
 }
 
-@keyframes movimento-continuo {
+@keyframes continuous-move {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
 
-/* Menu Hambúrguer */
-.menu-items {
+.header__controls {
     display: flex;
     align-items: center;
 }
-
-.hamburger-btn {
+.header__hamburger {
     display: none;
     background: none;
     border: none;
@@ -150,7 +141,7 @@
     margin-left: 20px;
 }
 
-.hamburger-btn span {
+.header__hamburger span {
     display: block;
     width: 100%;
     height: 3px;
@@ -159,24 +150,24 @@
     transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-.hamburger-btn.is-active span:nth-child(1) {
+.header__hamburger.is-active span:nth-child(1) {
     transform: translateY(8px) rotate(45deg);
 }
 
-.hamburger-btn.is-active span:nth-child(2) {
+.header__hamburger.is-active span:nth-child(2) {
     opacity: 0;
 }
 
-.hamburger-btn.is-active span:nth-child(3) {
+.header__hamburger.is-active span:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
 }
 
-@media (max-width: 945px) {
-    .hamburger-btn {
+@media (max-width: 977px) {
+    .header__hamburger {
         display: block;
     }
     
-    .menu {
+    .header__nav {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -197,30 +188,30 @@
         pointer-events: none;
     }
 
-    .menu.is-active {
+    .header__nav.is-active {
         transform: translateX(0);
         opacity: 1;
         pointer-events: auto;
     }
     
-    .menu a {
+    .header__nav a {
         padding: 15px 0;
         border-left: none;
         color: #2a2566;
         font-size: 1.2rem;
     }
 
-    .menu a + a {
+    .header__nav a + a {
       border-left: none;
     }
     
-    .menu a::after {
+    .header__nav a::after {
       background-color: #2a2566;
     }
 }
 
 @media (max-width: 670px) {
-    .menu {
+    .header__nav {
         width: 100%;
         top: 85px;
         left: 0;
@@ -228,11 +219,26 @@
         box-shadow: none;
     }
     
-    .menu.is-active {
+    .header__nav.is-active {
         transform: translateX(0);
     }
 
-    .menu a {
+    .header__nav a {
       font-size: 25px;
     }
+}
+
+@media (max-width: 485px) {
+  .header__logo img {
+    margin: 0;
+  }
+  .header__cta {
+    margin-left: 16px;
+  }
+}
+
+@media (max-width: 392px) {
+  .header__cta {
+    padding: 8px 2vw;
+  }
 }

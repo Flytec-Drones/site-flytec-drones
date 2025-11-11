@@ -17,9 +17,5 @@ function carregarHTML(url, seletorDestino) {
     .catch(error => console.error(error));
 }
 
-carregarHTML("./components/header/header.html", ".header");
-carregarHTML("./components/hero/hero.html", ".hero");
-carregarHTML("./components/about/about.html", ".about");
-carregarHTML("./components/team/team.html", ".team");
-carregarHTML("./components/achievements/achievements.html", ".achievements");
-carregarHTML("./components/footer/footer.html", ".footer");
+carregarHTML("components/header/header.html", ".header");
+carregarHTML("components/footer/footer.html", ".footer");
