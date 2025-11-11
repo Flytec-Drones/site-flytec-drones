@@ -1,5 +1,5 @@
 .header {
-  background-color: var(--primary-color);
+  background-color: var(--violeta);
   padding: 8px 30px;
   position: fixed;
   top: 0;
@@ -45,7 +45,7 @@
 }
 
 .header__nav a:hover {
-  color: var(--primary-color);
+  color: var(--violeta);
 }
 
 .header__nav a::after {
@@ -55,7 +55,7 @@
   left: 0;
   width: 0%;
   height: 2px;
-  background-color: var(--primary-color);
+  background-color: var(--violeta);
   transition: width 0.3s ease;
 }
 
@@ -69,11 +69,11 @@
 
 .header__cta {
   position: relative;
-  background-color: white;
+  background-color: var(--card-background-color);
   border-radius: 30px;
   padding: 8px 20px;
   text-decoration: none;
-  color: #2a2566;
+  color: var(--violeta);
   margin-left: 40px;
   overflow: hidden;
   transition: all 0.3s ease;
@@ -98,7 +98,7 @@
   font-family: "BioRhyme", serif;
   font-weight: 700;
 
-  background: linear-gradient(45deg, rgba(63, 94, 251, 1) 0%, rgba(252, 70, 107, 1) 100%);
+  background: linear-gradient(45deg, var(--roxo) 0%, var(--amarelo) 100%);
   background-size: 200% 200%;
   background-position: 0% 50%;
 
@@ -197,7 +197,7 @@
     .header__nav a {
         padding: 15px 0;
         border-left: none;
-        color: #2a2566;
+        color: var(--roxo);
         font-size: 1.2rem;
     }
 
@@ -206,7 +206,7 @@
     }
     
     .header__nav a::after {
-      background-color: #2a2566;
+      background-color: var(--roxo);
     }
 }
 

@@ -3,16 +3,18 @@
   --font-size-h1: 1.2em;
   --font-size-h2: 1.1em;
 
-  --primary-color: #040053;
-  --secondary-color: #2d0a66;
+  --violeta: #040053;
+  --roxo: #4b0c66;
+  --amarelo: #f2e997;
+  --bege: #f2f0d7;
+  --lilas: #c59fe0;
+  --lavanda: #aface5;
   --gray-color: #d9d9d9;
   --white-color: #f1f1ff;
   --text-color: #212121;
 
-  --primary-text-color: #2F1E4A;
-  --secondary-text-color: #55446E;
   --card-background-color: #E6E1EE;
-  --icon-color: #8C6EDF;
+  --icon-color: #f2e997;
 
   --max-width: min(1300px, 80dvw, 90dvw);
 
