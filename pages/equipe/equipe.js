@@ -18,4 +18,5 @@ function carregarHTML(url, seletorDestino) {
 }
 
 carregarHTML("components/header/header.html", ".header");
+carregarHTML("components/cards/cards.html", ".cards");
 carregarHTML("components/footer/footer.html", ".footer");

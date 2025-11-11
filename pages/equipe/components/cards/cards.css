@@ -1,0 +1,147 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "BioRhyme", serif;
+    background: #f0f2f5;
+    line-height: 1.6;
+}
+
+.header {
+    background: #2a2566;
+    color: white;
+    padding: 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.grid {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+
+.aluno-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    width: 250px;
+    margin: 0 10px;
+}
+
+.aluno-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+}
+
+.aluno-card-link:hover .aluno-card {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.aluno-card-link:hover {
+    cursor: pointer;
+}
+
+i.fa-solid.fa-image.aluno-ico {
+    font-size: 150px;
+    color: #2a2566;
+    margin: auto;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.aluno-info h3 {
+    color: #2a2566;
+    margin-bottom: 5px;
+}
+
+.aluno-info p {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 999;
+}
+
+.modal:target {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    max-width: 500px;
+    width: 90%;
+    position: relative;
+    animation: modalIn 0.3s;
+    text-align: center;
+}
+
+@keyframes modalIn {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.modal-icon {
+    font-size: 150px;
+    color: #2a2566;
+    margin-bottom: 20px;
+}
+
+.modal-info h2 {
+    color: #2a2566;
+    margin-bottom: 10px;
+}
+
+.modal-info p {
+    margin-bottom: 10px;
+    color: #666;
+    text-align: justify;
+}
+
+.close-modal {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    text-decoration: none;
+    color: #666;
+    font-size: 24px;
+    line-height: 1;
+}
